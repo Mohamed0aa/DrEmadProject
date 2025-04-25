@@ -12,5 +12,7 @@ namespace DataAccessLayer.Models
 		public string Name { get; set; } = null!;
 		public int Age { get; set; }
 		public string Email { get; set; }
+		public int Course_Id {  get; set; }
+		public Course? Course { get; set; }
 	}
 }
