@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Data.Cofig
 {
-    public class StudentCopnfig : IEntityTypeConfiguration<Student>
+    internal class CourseConfig : IEntityTypeConfiguration<Course>
     {
-        public void Configure(EntityTypeBuilder<Student> builder)
+        public void Configure(EntityTypeBuilder<Course> builder)
         {
-            builder.Property(s => s.Email).IsRequired().HasDefaultValueSql("GETDATE()");
-            builder.Property(s => s.Name).IsRequired().HasMaxLength(50);
+            builder.Property(d => d.Name).IsRequired().HasMaxLength(50);
+            builder.Property(d => d.Description).HasMaxLength(150);
         }
     }
 }
